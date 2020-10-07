@@ -1,0 +1,3 @@
+[submodule "DynamicDialogue"]
+	path = DynamicDialogue
+	url = git@github.com:hollowspecter/DynamicDialogue.git
