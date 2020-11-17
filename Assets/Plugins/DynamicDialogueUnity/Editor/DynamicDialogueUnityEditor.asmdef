@@ -1,0 +1,17 @@
+{
+    "name": "DynamicDialogueUnityEditor",
+    "references": [
+        "GUID:d9348ed19535eec4c8e2eef85256dc9a"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
