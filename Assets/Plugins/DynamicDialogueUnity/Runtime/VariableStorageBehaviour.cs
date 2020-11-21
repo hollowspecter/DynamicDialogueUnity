@@ -10,6 +10,13 @@ namespace DynamicDialogue.Unity
 	/// </summary>
 	public abstract class VariableStorageBehaviour : MonoBehaviour, IVariableStorage
 	{
+		public abstract int Count
+		{
+			get;
+		}
+
+		public abstract string this[int index] { get; }
+
 		public abstract void SetValue(string variableName, string stringValue);
 
 		public abstract void SetValue(string variableName, float floatValue);

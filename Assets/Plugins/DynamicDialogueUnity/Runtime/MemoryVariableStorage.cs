@@ -9,7 +9,11 @@ namespace DynamicDialogue.Unity
 	/// </summary>
 	public class MemoryVariableStorage : VariableStorageBehaviour
 	{
-		private Dictionary<string, object> variables = new Dictionary<string, object>();
+		private SortedList<string, object> variables = new SortedList<string, object>();
+
+		public override string this[int index] => variables.Keys[index];
+
+		public override int Count => variables.Count;
 
 		[System.Serializable]
 		public class DefaultVariable<T>
@@ -69,9 +73,9 @@ namespace DynamicDialogue.Unity
 		{
 			if (variables.TryGetValue(variableName, out var foundValue))
 			{
-				if (typeof(T).IsAssignableFrom(foundValue.GetType()))
+				if (foundValue is T t)
 				{
-					result = (T)foundValue;
+					result = t;
 					return true;
 				}
 				else
